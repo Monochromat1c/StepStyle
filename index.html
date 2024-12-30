@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepStyle - Premium Footwear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+    <nav class="navbar">
+        <div class="logo">StepStyle</div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Step into Style</h1>
+            <p>Discover our premium collection of handcrafted footwear</p>
+            <a href="collection.html" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="featured" class="featured">
+        <h2>Featured Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-content">
+                    <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842" alt="Lifestyle Sneakers">
+                    <h3>Street Legend</h3>
+                    <p>Modern lifestyle sneakers</p>
+                    <div class="price">$149.99</div>
+                </div>
+                <button class="shop-button" onclick="openModal('featured-modal1')">View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="product-content">
+                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f" alt="Leather Boots">
+                    <h3>Classic Leather Boot</h3>
+                    <p>Timeless brown leather boots</p>
+                    <div class="price">$189.99</div>
+                </div>
+                <button class="shop-button" onclick="openModal('featured-modal2')">View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="product-content">
+                    <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4" alt="Oxford Shoes">
+                    <h3>Classic Oxford</h3>
+                    <p>Traditional oxford dress shoes</p>
+                    <div class="price">$199.99</div>
+                </div>
+                <button class="shop-button" onclick="openModal('featured-modal3')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Product Modals -->
+    <!-- Modal 1 - Street Legend -->
+    <div id="featured-modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('featured-modal1')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842" alt="Lifestyle Sneakers">
+                </div>
+                <div class="modal-details">
+                    <h2>Street Legend</h2>
+                    <div class="price">$149.99</div>
+                    <p class="description">Modern lifestyle sneakers that blend style with comfort. Perfect for urban explorers who value both aesthetics and functionality.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Premium leather and suede upper</li>
+                            <li>Cushioned insole</li>
+                            <li>Stylish urban design</li>
+                            <li>Versatile color scheme</li>
+                            <li>Memory foam padding</li>
+                            <li>Non-marking outsole</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 - Classic Leather Boot -->
+    <div id="featured-modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('featured-modal2')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f" alt="Leather Boots">
+                </div>
+                <div class="modal-details">
+                    <h2>Classic Leather Boot</h2>
+                    <div class="price">$189.99</div>
+                    <p class="description">Timeless brown leather boots crafted with premium materials and traditional bootmaking techniques. Perfect for both casual and semi-formal occasions.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Full-grain leather upper</li>
+                            <li>Goodyear welt construction</li>
+                            <li>Cork-filled midsole</li>
+                            <li>Leather lining</li>
+                            <li>Brass hardware</li>
+                            <li>Durable rubber sole</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 - Classic Oxford -->
+    <div id="featured-modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('featured-modal3')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4" alt="Oxford Shoes">
+                </div>
+                <div class="modal-details">
+                    <h2>Classic Oxford</h2>
+                    <div class="price">$199.99</div>
+                    <p class="description">Traditional oxford dress shoes crafted with premium leather. Perfect for formal occasions and business wear.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Premium calfskin leather</li>
+                            <li>Traditional closed lacing</li>
+                            <li>Leather sole with rubber insert</li>
+                            <li>Full leather lining</li>
+                            <li>Blake stitched construction</li>
+                            <li>Cushioned insole</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="benefits" class="benefits">
+        <div class="benefit-container">
+            <div class="benefit-item">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Free Shipping</h3>
+                <p>On orders over $100</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>30-day return policy</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Payment</h3>
+                <p>100% secure checkout</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Newsletter</h2>
+            <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>StepStyle</h3>
+                <p>Premium footwear for every occasion.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@stepstyle.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StepStyle. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

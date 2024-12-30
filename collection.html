@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - StepStyle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">StepStyle</div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="collection-header">
+        <h1>Our Collection</h1>
+        <p>Discover your perfect pair from our curated selection</p>
+    </section>
+
+    <section class="collection-filters">
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="sneakers">Sneakers</button>
+            <button class="filter-btn" data-category="boots">Boots</button>
+            <button class="filter-btn" data-category="casual">Casual</button>
+            <button class="filter-btn" data-category="formal">Formal</button>
+        </div>
+    </section>
+
+    <section class="collection-grid">
+        <!-- Sneakers -->
+        <div class="product-card" data-category="sneakers">
+            <div class="product-content">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sport Sneakers">
+                <h3>Urban Runner</h3>
+                <p>Premium athletic sneakers for running</p>
+                <div class="price">$129.99</div>
+            </div>
+            <button class="shop-button" onclick="openModal('modal1')">View Details</button>
+        </div>
+
+        <div class="product-card" data-category="sneakers">
+            <div class="product-content">
+                <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842" alt="Lifestyle Sneakers">
+                <h3>Street Legend</h3>
+                <p>Modern lifestyle sneakers</p>
+                <div class="price">$149.99</div>
+            </div>
+            <button class="shop-button" onclick="openModal('modal2')">View Details</button>
+        </div>
+
+        <!-- Boots -->
+        <div class="product-card" data-category="boots">
+            <div class="product-content">
+                <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f" alt="Leather Boots">
+                <h3>Classic Leather Boot</h3>
+                <p>Timeless brown leather boots</p>
+                <div class="price">$189.99</div>
+            </div>
+            <button class="shop-button" onclick="openModal('modal3')">View Details</button>
+        </div>
+
+        <div class="product-card" data-category="boots">
+            <div class="product-content">
+                <img src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76" alt="Combat Boots">
+                <h3>Urban Combat</h3>
+                <p>Rugged combat boots</p>
+                <div class="price">$159.99</div>
+            </div>
+            <button class="shop-button" onclick="openModal('modal4')">View Details</button>
+        </div>
+
+        <!-- Casual -->
+        <div class="product-card" data-category="casual">
+            <div class="product-content">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77" alt="Casual Slip-ons">
+                <h3>Daily Comfort</h3>
+                <p>Everyday casual slip-on shoes</p>
+                <div class="price">$89.99</div>
+            </div>
+            <button class="shop-button" onclick="openModal('modal5')">View Details</button>
+        </div>
+
+        <div class="product-card" data-category="casual">
+            <div class="product-content">
+                <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1" alt="Casual Loafers">
+                <h3>Weekend Loafer</h3>
+                <p>Comfortable casual loafers</p>
+                <div class="price">$99.99</div>
+            </div>
+            <button class="shop-button" onclick="openModal('modal6')">View Details</button>
+        </div>
+
+        <!-- Formal -->
+        <div class="product-card" data-category="formal">
+            <div class="product-content">
+                <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4" alt="Oxford Shoes">
+                <h3>Classic Oxford</h3>
+                <p>Traditional oxford dress shoes</p>
+                <div class="price">$199.99</div>
+            </div>
+            <button class="shop-button" onclick="openModal('modal7')">View Details</button>
+        </div>
+
+        <div class="product-card" data-category="formal">
+            <div class="product-content">
+                <img src="https://images.unsplash.com/photo-1582897085656-c636d006a246" alt="Formal Brogues">
+                <h3>Executive Brogue</h3>
+                <p>Premium leather brogues</p>
+                <div class="price">$179.99</div>
+            </div>
+            <button class="shop-button" onclick="openModal('modal8')">View Details</button>
+        </div>
+    </section>
+
+    <!-- Product Modals -->
+    <!-- Modal 1 - Urban Runner -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sport Sneakers">
+                </div>
+                <div class="modal-details">
+                    <h2>Urban Runner</h2>
+                    <div class="price">$129.99</div>
+                    <p class="description">Premium athletic sneakers designed for running enthusiasts. Features advanced cushioning technology and breathable mesh upper for maximum comfort during your runs.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Breathable mesh upper</li>
+                            <li>Responsive cushioning</li>
+                            <li>Durable rubber outsole</li>
+                            <li>Lightweight design</li>
+                            <li>Perfect for long-distance running</li>
+                            <li>Available in multiple colors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 - Street Legend -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842" alt="Lifestyle Sneakers">
+                </div>
+                <div class="modal-details">
+                    <h2>Street Legend</h2>
+                    <div class="price">$149.99</div>
+                    <p class="description">Modern lifestyle sneakers that blend style with comfort. Perfect for urban explorers who value both aesthetics and functionality.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Premium leather and suede upper</li>
+                            <li>Cushioned insole</li>
+                            <li>Stylish urban design</li>
+                            <li>Versatile color scheme</li>
+                            <li>Memory foam padding</li>
+                            <li>Non-marking outsole</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 - Classic Leather Boot -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f" alt="Leather Boots">
+                </div>
+                <div class="modal-details">
+                    <h2>Classic Leather Boot</h2>
+                    <div class="price">$189.99</div>
+                    <p class="description">Timeless brown leather boots crafted with premium materials and traditional bootmaking techniques. Perfect for both casual and semi-formal occasions.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Full-grain leather upper</li>
+                            <li>Goodyear welt construction</li>
+                            <li>Cork-filled midsole</li>
+                            <li>Leather lining</li>
+                            <li>Brass hardware</li>
+                            <li>Durable rubber sole</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 - Urban Combat -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76" alt="Combat Boots">
+                </div>
+                <div class="modal-details">
+                    <h2>Urban Combat</h2>
+                    <div class="price">$159.99</div>
+                    <p class="description">Rugged combat boots designed for durability and style. Features modern updates to the classic military boot design.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Water-resistant leather</li>
+                            <li>Reinforced stitching</li>
+                            <li>Speed lacing system</li>
+                            <li>Shock-absorbing sole</li>
+                            <li>Padded collar</li>
+                            <li>Steel shank support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 - Daily Comfort -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal5')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77" alt="Casual Slip-ons">
+                </div>
+                <div class="modal-details">
+                    <h2>Daily Comfort</h2>
+                    <div class="price">$89.99</div>
+                    <p class="description">Everyday casual slip-on shoes designed for maximum comfort and convenience. Perfect for casual outings and daily wear.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Easy slip-on design</li>
+                            <li>Memory foam insole</li>
+                            <li>Flexible outsole</li>
+                            <li>Breathable canvas upper</li>
+                            <li>Elastic goring</li>
+                            <li>Padded collar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 - Weekend Loafer -->
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal6')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1" alt="Casual Loafers">
+                </div>
+                <div class="modal-details">
+                    <h2>Weekend Loafer</h2>
+                    <div class="price">$99.99</div>
+                    <p class="description">Comfortable casual loafers perfect for weekend outings. Combines classic style with modern comfort features.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Genuine suede upper</li>
+                            <li>Cushioned footbed</li>
+                            <li>Flexible construction</li>
+                            <li>Leather lining</li>
+                            <li>Non-slip sole</li>
+                            <li>Moccasin stitching</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7 - Classic Oxford -->
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal7')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4" alt="Oxford Shoes">
+                </div>
+                <div class="modal-details">
+                    <h2>Classic Oxford</h2>
+                    <div class="price">$199.99</div>
+                    <p class="description">Traditional oxford dress shoes crafted with premium leather. Perfect for formal occasions and business wear.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Premium calfskin leather</li>
+                            <li>Traditional closed lacing</li>
+                            <li>Leather sole with rubber insert</li>
+                            <li>Full leather lining</li>
+                            <li>Blake stitched construction</li>
+                            <li>Cushioned insole</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8 - Executive Brogue -->
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal8')">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1582897085656-c636d006a246" alt="Formal Brogues">
+                </div>
+                <div class="modal-details">
+                    <h2>Executive Brogue</h2>
+                    <div class="price">$179.99</div>
+                    <p class="description">Premium leather brogues featuring classic wingtip design. Ideal for business and formal occasions.</p>
+                    <div class="product-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li>Full brogue pattern</li>
+                            <li>Burnished leather finish</li>
+                            <li>Leather sole</li>
+                            <li>Cork-filled footbed</li>
+                            <li>Wingtip design</li>
+                            <li>Leather storm welt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>StepStyle</h3>
+                <p>Premium footwear for every occasion.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@stepstyle.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StepStyle. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
