@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuToggle.addEventListener('click', function() {
         navLinks.classList.toggle('active');
+        navbar.classList.toggle('menu-active');
     });
 
     // Close menu when clicking outside
