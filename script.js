@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
+            navbar.classList.remove('menu-active');
         }
     });
 
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
+            navbar.classList.remove('menu-active');
         });
     });
 
